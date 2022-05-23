@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-import { useState, onChange } from 'react';
-
-// components
-// import './components/Header.js'
+import React, { useEffect, useState, onChange } from 'react';
 
 // css
 import './App.css';
+
+// components
+import Header from './components/Header.js';
+import Carousel from './components/Carousel.js'
 
 //images
 import logo from './images/odinLogo.png';
@@ -14,69 +14,42 @@ import slideBox2 from './images/backgroundImage_02.jpg';
 
 function App() {
 
-  let [currentSlide, setCurrentSlide] = useState(0);
-
-  const totalSlides = 1;
-
-  const nextSlide = () => {
-    // if(currentSlide >= totalSlides){
-    //   setCurrentSlide(0);
-    // } else {
-    //   setCurrentSlide(currentSlide + 1);
-    // }
-    document.querySelector('.slideBoxes').classList.add('moveSoft');
-    document.querySelector('.slideBoxes').style.transform = 'translateX(-100vw)';
-  }
-  const prevSlide = () => {
-    // if (currentSlide == 0) {
-    //   setCurrentSlide(totalSlides);
-    // } else {
-    //   setCurrentSlide(currentSlide - 1);
-    // }
-    document.querySelector('.slideBoxes').classList.add('moveSoft');
-    document.querySelector('.slideBoxes').style.transform = 'translateX(0vw)';
-  }
  
-  // const onChange = (e) => {
-  //   setCurrentSlide(e.target.value);
-  //   console.log(currentSlide)
-  // }
   
   return (
     <div className="App">
       <div className="main">
-        {/* header component */}
-        <div className="mainHeader">
-          <div className="mainHeaderLogo">
-            <a href="#"><img src={logo} alt="logo" /></a>
-          </div>
-          <div className="mainHeaderMenu">
-            <span><a href="#">공식카페</a></span>
-            <span><a href="#">가이드</a></span>
-            <span><a href="#">게임소개</a></span>
-            <span><a href="#">자료실</a></span>
-            <span><a href="#">고객센터</a></span>
-          </div>
-          <div className="mainHeaderButton">
-            <span>GAME START</span>
-          </div>
-        </div>
-        {/* 캐러셀 */}
-        <div className="mainBody">
-          <div className="slideContainer">
-            <div className="slideBoxes">
-              <div className="slideBox">
-                <img className="slidBox1" onChange={onChange} src={slideBox1} alt="slideImage01" />
-              </div>
-              <div className="slideBox">
-                <img className="slidBox2" onChange={onChange} src={slideBox2} alt="slideImage02" />
-              </div>
+        <Header logo={logo} />  
+        <Carousel slideBox1={slideBox1} slideBox2={slideBox2} />
+        <div className="mainContents">
+          {/* Update */}
+          <div className="gameUpdate">
+            <div className="gameUpateTitle">
+              <h2>새소식</h2>
+              <span>+</span>
             </div>
-            <div className="slideBoxButton">
-              <button onClick={()=>{}}>업데이트와 이벤트 안내</button>
-              <button>공식 유튜브 바로가기</button>
-              <button onClick={prevSlide}>←</button>
-              <button onClick={nextSlide}>→</button>
+            <div className="gameUpdateText"> 
+              <div className="gameUpdateTexts"><span>[업데이트]</span> 5/18(수) 업데이트 상세 내역</div>
+              <div className="gameUpdateTexts"><span>[공지사항]</span> 콘텐츠 업데이트 지연에 사과드립니다.</div>
+              <div className="gameUpdateTexts"><span>[공지사항]</span> 런처 관련 오류 메시지별 해결 방법 안내</div>
+              <div className="gameUpdateTexts"><span>[공지사항]</span> 게임 접속 종료 및 계정 보호조치 기능 안내</div>
+            </div>
+          </div>
+          {/* Video */}
+           <div className="gameVideo">
+            <div className="gameVideoTitle">
+              <h2>추천영상</h2>
+              <span>+</span>
+            </div>
+            <div className="gameVideoYoutube">
+              <div className="play1">
+                <iframe width="400" height="305" src="https://www.youtube.com/embed/p0CgYOVKgkA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div className="play2">
+                <iframe width="250" height="150" src="https://www.youtube.com/embed/SoQt3I7Va3w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="250" height="150" src="https://www.youtube.com/embed/eFGeiBE4-_U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              
             </div>
           </div>
         </div>
