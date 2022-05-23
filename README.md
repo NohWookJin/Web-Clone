@@ -9,7 +9,7 @@
 <div>+ 유튜브 iframe 추가</div>
 <div>+ 기타 css</div>
 </br>
-<img width="1359" alt="스크린샷 2022-05-23 오후 7 16 56" src="https://user-images.githubusercontent.com/101846817/169798600-056cb6c8-8d04-40f1-b306-4854ba0f1c10.png">
+<img width="1440" alt="스크린샷 2022-05-23 오후 7 30 22" src="https://user-images.githubusercontent.com/101846817/169800503-0ef5ba94-5af8-4bd2-926b-fd3271f750bc.png">
 
 
 Clone Object : https://odin.game.daum.net/odin/index
