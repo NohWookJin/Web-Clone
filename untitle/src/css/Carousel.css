@@ -1,0 +1,48 @@
+.moveSoft {
+  transition: all 1s;
+}
+.slideContainer {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 5px;
+  background-color: rgb(242, 242, 242);
+}
+.slideBoxes {
+  width: 200vw;
+  display: flex;
+}
+.slideBox {
+  width: 100vw;
+}
+.slideBox img {
+  width: 100%;
+  height: 600px;
+}
+.slideBoxButton {
+  display: flex;
+  align-items: center;
+}
+.slideBoxButton button {
+  color: rgba(0, 0, 0, 0.9);
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: rgb(242, 242, 242);
+}
+.slideBoxButton button:first-child,
+.slideBoxButton button:nth-child(2) {
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+}
+.slideBoxButton button:nth-child(2) {
+  margin-right: 100px;
+}
+.slideBoxButton button:nth-child(3),
+.slideBoxButton button:last-child {
+  text-align: right;
+  margin-left: 20px;
+}
+.slideBoxButton button:last-child {
+  margin-right: 100px;
+}

@@ -1,0 +1,32 @@
+.wrapContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 25px 100px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.wrap {
+  display: flex;
+  align-items: center;
+}
+.wrap a,
+.wrap2 a {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  text-decoration: none;
+}
+.wrapText {
+  margin-left: 10px;
+  margin-right: 50px;
+  font-weight: 600;
+}
+.wrap2 {
+  display: flex;
+  align-items: center;
+}
+.wrap2 a {
+  margin-left: 20px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,49 @@
+.mainContents {
+  padding: 10px 100px;
+  display: flex;
+}
+.gameUpdate {
+  width: 40%;
+}
+.gameUpateTitle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.gameUpdateText {
+  width: 100%;
+}
+.gameUpdateTexts {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 15px 0px;
+  font-weight: 600;
+  font-size: 15px;
+}
+.gameUpdateTexts span {
+  color: rgba(0, 0, 0, 0.5);
+}
+.gameVideo {
+  width: 60%;
+  margin-left: 70px;
+}
+.gameVideoTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gameVideoYoutube {
+  width: 60%;
+  display: flex;
+}
+.play1 {
+  margin-right: 5px;
+}
+.play2 {
+  display: flex;
+  flex-direction: column;
+}
+.play2 iframe {
+  margin-bottom: 5px;
+}

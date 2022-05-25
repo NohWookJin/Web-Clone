@@ -1,21 +1,35 @@
+import React, {onChange, useState} from 'react'
+
 function Carousel(props) {
-     const nextSlide = () => {
-    document.querySelector('.slideBoxes').classList.add('moveSoft');
-    document.querySelector('.slideBoxes').style.transform = 'translateX(-100vw)';
-     }
+
+    let [currentSlide, setCurrentSlide] = useState(0);
+     
+    const nextSlide = () => {
+        document.querySelector('.slideBoxes').classList.add('moveSoft');
+        document.querySelector('.slideBoxes').style.transform = 'translateX(-100vw)';
+        setCurrentSlide(currentSlide+1);
+        if (currentSlide == 1) {
+            setCurrentSlide(0);
+            prevSlide();
+        } 
+    }
+    
     const prevSlide = () => {
-    document.querySelector('.slideBoxes').classList.add('moveSoft');
-    document.querySelector('.slideBoxes').style.transform = 'translateX(0vw)';
-  }
+        document.querySelector('.slideBoxes').classList.add('moveSoft');
+        document.querySelector('.slideBoxes').style.transform = 'translateX(0vw)';
+        if (currentSlide == 0) {
+            nextSlide();
+        } 
+    }
     return (
         
         <div className="slideContainer">
-            <div className="slideBoxes">
+            <div className="slideBoxes" onChange={onChange}>
                 <div className="slideBox">
-                    <img className="slidBox1" onChange={props.onChange} src={props.slideBox1} alt="slideImage01" />
+                    <img className="slidBox1" src={props.slideBox1} alt="slideImage01" />
                 </div>
                 <div className="slideBox">
-                    <img className="slidBox2" onChange={props.onChange} src={props.slideBox2} alt="slideImage02" />
+                    <img className="slidBox2" src={props.slideBox2} alt="slideImage02" />
                 </div>
             </div>
             <div className="slideBoxButton">
