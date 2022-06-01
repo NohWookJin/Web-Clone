@@ -34,7 +34,7 @@ function Carousel(props) {
             </div>
             <div className="slideBoxButton">
                 <button>업데이트와 이벤트 안내</button>
-                <button>공식 유튜브 바로가기</button>
+                <button>공식 유튜브 바로가기  </button>
                 <button onClick={prevSlide}>←</button>
                 <button onClick={nextSlide}>→</button>
             </div>
